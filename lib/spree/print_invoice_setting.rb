@@ -2,8 +2,8 @@ module Spree
   class PrintInvoiceSetting < Preferences::Configuration
     preference :next_number,      :integer, default: nil
     preference :logo_path,        :string,  default: Spree::Config[:admin_interface_logo]
-    preference :page_size,        :string,  default: 'LETTER'
-    preference :page_layout,      :string,  default: 'landscape'
+    preference :page_size,        :string,  default: 'A4'
+    preference :page_layout,      :string,  default: 'portrait'
     preference :footer_left,      :string,  default: ''
     preference :footer_right,     :string,  default: ''
     preference :return_message,   :text,    default: ''
@@ -11,9 +11,9 @@ module Spree
     preference :use_footer,       :boolean, default: false
     preference :use_page_numbers, :boolean, default: false
     preference :logo_scale,       :integer, default: 50
-    preference :font_face,        :string,  default: 'Helvetica'
+    preference :font_face,        :string,  default: 'Courier'
     preference :font_size,        :integer, default: 9
-    preference :store_pdf,        :boolean, default: false
+    preference :store_pdf,        :boolean, default: true
     preference :storage_path,     :string,  default: 'tmp/invoice_prints'
 
     def page_sizes
